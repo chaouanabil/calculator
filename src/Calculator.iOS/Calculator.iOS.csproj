@@ -216,7 +216,7 @@
     </PackageReference>
     <PackageReference Include="Uno.UI" Version="3.1.0-dev.628" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.2" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Platform)' == 'iPhoneSimulator' ">
     <NativeReference Include="NativeReferences/x86_64/libCalcManager.a">
