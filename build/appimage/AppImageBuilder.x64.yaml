@@ -36,6 +36,7 @@ AppDir:
       - libgtk-3-bin
       - libgtk-3-common
       - gtk2-engines-pixbuf
+      - libcanberra-gtk-module
       #- libgcc-s1
       #- gtk+-3.0
       #- gtk2-engines-pixbuf
