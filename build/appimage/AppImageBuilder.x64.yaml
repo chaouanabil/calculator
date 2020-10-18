@@ -32,7 +32,9 @@ AppDir:
       - sourceline: deb http://security.ubuntu.com/ubuntu/ focal-security multiverse
     include:
       - libgcc-s1
-      - libgtk3.0-0
+      - libgtk-3-0
+      - libgtk-3-bin
+      - libgtk-3-common
       - gtk2-engines-pixbuf
       #- libgcc-s1
       #- gtk+-3.0
