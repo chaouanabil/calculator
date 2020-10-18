@@ -32,8 +32,11 @@ AppDir:
       - sourceline: deb http://security.ubuntu.com/ubuntu/ focal-security multiverse
     include:
       - libgcc-s1
-      - gtk+-3.0
+      - libgtk3.0-0
       - gtk2-engines-pixbuf
+      #- libgcc-s1
+      #- gtk+-3.0
+      #- gtk2-engines-pixbuf
     exclude:
       - hicolor-icon-theme
       - humanity-icon-theme
