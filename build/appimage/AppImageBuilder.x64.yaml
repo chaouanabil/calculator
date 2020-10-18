@@ -1,9 +1,4 @@
 version: 1
-script:
-  # Remove any previous build
-  - chmod +x adjust-gtk.sh
-  - ./adjust-gtk.sh
-
 AppDir:
   path: ./AppDir
   app_info:

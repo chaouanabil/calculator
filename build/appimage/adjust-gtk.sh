@@ -6,7 +6,7 @@ APPDIR=${APPDIR:-"AppDir"}
 echo ""
 echo "########################################################################"
 echo ""
-echo "Copying GTK libraries and configuration files"
+echo "Copying GTK libraries and configuration files to base $APPDIR"
 echo ""
 
 # Manually copy librsvg, because it is not picked automatically by copy_deps
