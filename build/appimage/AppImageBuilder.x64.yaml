@@ -32,15 +32,11 @@ AppDir:
       - sourceline: deb http://security.ubuntu.com/ubuntu/ focal-security multiverse
     include:
       - libgcc-s1
-      - libgtk-3-0
-      - libgdk-pixbuf2.0-0
-      - libgdk-pixbuf2.0-bin
-      - libgdk-pixbuf2.0-common
-      - libcanberra-gtk-module
-      - libcanberra-gtk3-module
+      - gtk+-3.0
     exclude:
       - hicolor-icon-theme
       - humanity-icon-theme
+      - mono
   exclude: []
   files:
     exclude:
