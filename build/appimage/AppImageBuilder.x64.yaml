@@ -11,10 +11,12 @@ AppDir:
   runtime:
     env:
       APPDIR_LIBRARY_PATH: $APPDIR/lib/x86_64-linux-gnu
+      APPDIR_LIBRARY_PATH: '$APPDIR/usr/lib:$APPDIR/usr/lib/x86_64-linux-gnu:$APPDIR/lib/x86_64-linux-gnu:$APPDIR/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders'
       GDK_PIXBUF_MODULEDIR: $APPDIR/usr/lib/gdk-pixbuf-2.0/loaders
       GDK_PIXBUF_MODULE_FILE: $APPDIR/usr/lib/gdk-pixbuf-2.0/loaders.cache
-      GTK_PATH: $APPDIR/usr/lib/gtk-3.0
-      LD_LIBRARY_PATH: $APPDIR/usr/lib:$GDK_PIXBUF_MODULEDIR:$LD_LIBRARY_PATH
+      GTK_THEME: Default
+      GTK_PATH: $APPDIR/usr/lib/x86_64-linux-gnu/gtk-2.0
+      GTK_EXE_PREFIX: $APPDIR/usr/lib/x86_64-linux-gnu
   apt:
     arch: amd64
     sources:
@@ -33,6 +35,7 @@ AppDir:
     include:
       - libgcc-s1
       - gtk+-3.0
+      - gtk2-engines-pixbuf
     exclude:
       - hicolor-icon-theme
       - humanity-icon-theme
