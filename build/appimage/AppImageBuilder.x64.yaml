@@ -11,27 +11,36 @@ AppDir:
   runtime:
     env:
       APPDIR_LIBRARY_PATH: $APPDIR/lib/x86_64-linux-gnu
+      GDK_PIXBUF_MODULEDIR: $APPDIR/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders
+      GDK_PIXBUF_MODULE_FILE: $APPDIR/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+      GTK_PATH: $APPDIR/usr/lib/gtk-3.0
+      LD_LIBRARY_PATH: $APPDIR/usr/lib:$GDK_PIXBUF_MODULEDIR:$LD_LIBRARY_PATH
   apt:
     arch: amd64
     sources:
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal main restricted
-      key_url: 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3b4fe6acc0b21f32'
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal universe
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates universe
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal multiverse
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates multiverse
-    - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted
-        universe multiverse
-    - sourceline: deb http://security.ubuntu.com/ubuntu/ focal-security main restricted
-    - sourceline: deb http://security.ubuntu.com/ubuntu/ focal-security universe
-    - sourceline: deb http://security.ubuntu.com/ubuntu/ focal-security multiverse
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal main restricted
+        key_url: 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3b4fe6acc0b21f32'
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal universe
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates universe
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal multiverse
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-updates multiverse
+      - sourceline: deb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted
+          universe multiverse
+      - sourceline: deb http://security.ubuntu.com/ubuntu/ focal-security main restricted
+      - sourceline: deb http://security.ubuntu.com/ubuntu/ focal-security universe
+      - sourceline: deb http://security.ubuntu.com/ubuntu/ focal-security multiverse
     include:
-    - libgcc-s1
-    - libgtk-3-0
-    - libgdk-pixbuf2.0-0
-    - libcanberra-gtk-module
-    - libcanberra-gtk3-module
+      - libgcc-s1
+      - libgtk-3-0
+      - libgdk-pixbuf2.0-0
+      - libgdk-pixbuf2.0-bin
+      - libgdk-pixbuf2.0-common
+      - libcanberra-gtk-module
+      - libcanberra-gtk3-module
+    exclude:
+      - hicolor-icon-theme
+      - humanity-icon-theme
   exclude: []
   files:
     exclude:
