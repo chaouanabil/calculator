@@ -365,7 +365,8 @@ jobs:
   - script: |
       /tmp/docker exec -t -u 0 ci-container \
       sh -c "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confold" -y install sudo"
-      sudo apt -y install zip
+      sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
+      sudo apt -y install zip gtk+3.0 libgtk-3-dev
     displayName: 'Setup dependencies'
 
   - script: |
