@@ -12,8 +12,6 @@ AppDir:
     env:
       APPDIR_LIBRARY_PATH: $APPDIR/lib/x86_64-linux-gnu
       APPDIR_LIBRARY_PATH: '$APPDIR/usr/lib:$APPDIR/usr/lib/x86_64-linux-gnu:$APPDIR/lib/x86_64-linux-gnu:$APPDIR/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders'
-      GDK_PIXBUF_MODULEDIR: $APPDIR/usr/lib/gdk-pixbuf-2.0/loaders
-      GDK_PIXBUF_MODULE_FILE: $APPDIR/usr/lib/gdk-pixbuf-2.0/loaders.cache
       GTK_THEME: Default
       GTK_PATH: $APPDIR/usr/lib/x86_64-linux-gnu/gtk-2.0
       GTK_EXE_PREFIX: $APPDIR/usr/lib/x86_64-linux-gnu
